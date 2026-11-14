@@ -12,7 +12,5 @@
   </defs>
   <rect width="512" height="512" rx="116" fill="#0B0C10"/>
   <rect x="1.5" y="1.5" width="509" height="509" rx="114.5" stroke="url(#nexium-edge)" stroke-opacity="0.5" stroke-width="3"/>
-  <path d="M256 74L393 153V311L256 390L119 311V153L256 74Z" stroke="url(#nexium-edge)" stroke-width="5"/>
-  <path d="M167 350V162L345 350V162" stroke="url(#nexium-gradient)" stroke-width="36" stroke-linecap="square" stroke-linejoin="miter"/>
-  <circle cx="256" cy="256" r="9" fill="#0B0C10" stroke="#4ED9C0" stroke-width="4"/>
+  <path d="M148.5 116.8L148.5 367.5L184.5 367.5L184.5 207.16L362.5 395.25L362.5 143.5L326.5 143.5L326.5 304.8Z" fill="url(#nexium-gradient)"/>
 </svg>
