@@ -1,0 +1,18 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="nexium-gradient" x1="132" y1="132" x2="392" y2="392" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A79BFF"/>
+      <stop offset="0.52" stop-color="#7C6BFF"/>
+      <stop offset="1" stop-color="#4ED9C0"/>
+    </linearGradient>
+    <linearGradient id="nexium-edge" x1="120" y1="96" x2="400" y2="424" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A99EFF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#4ED9C0" stop-opacity="0.18"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="#0B0C10"/>
+  <rect x="1.5" y="1.5" width="509" height="509" rx="114.5" stroke="url(#nexium-edge)" stroke-opacity="0.5" stroke-width="3"/>
+  <path d="M256 74L393 153V311L256 390L119 311V153L256 74Z" stroke="url(#nexium-edge)" stroke-width="5"/>
+  <path d="M167 350V162L345 350V162" stroke="url(#nexium-gradient)" stroke-width="36" stroke-linecap="square" stroke-linejoin="miter"/>
+  <circle cx="256" cy="256" r="9" fill="#0B0C10" stroke="#4ED9C0" stroke-width="4"/>
+</svg>
