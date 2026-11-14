@@ -198,3 +198,4 @@ Download Nexium only from this repository's [Releases](https://github.com/Gregor
 <p align="center">
   <sub>Windows x64 &nbsp;·&nbsp; Linux x64 &nbsp;·&nbsp; Tauri 2 + Rust</sub>
 </p>
+ 
