@@ -1,0 +1,69 @@
+name: Feature request
+description: Suggest a capability or improvement for Nexium.
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the problem first, then the change you would like. Please search
+        [existing issues](https://github.com/GregoryAM-SP/Nexium/issues?q=is%3Aissue) before submitting.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of Nexium does this affect?
+      options:
+        - AI Agent / Assistant
+        - Editor
+        - Explorer / file operations
+        - Search
+        - Source Control / Git
+        - Terminal
+        - Preview
+        - Tasks
+        - Updates / installer
+        - Settings
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: The workflow that is currently slow, awkward or impossible.
+      placeholder: When I review a diff I have to switch panels to see which file changed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like Nexium to do?
+      placeholder: Show the changed file list next to the diff view.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you have tried
+      description: Other tools, workarounds, or another way Nexium could solve this.
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Mockups, screenshots, links, or anything else that helps explain the request.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and this request is not already open.
+          required: true

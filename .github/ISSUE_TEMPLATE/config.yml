@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Download the latest Nexium release
+    url: https://github.com/GregoryAM-SP/Nexium/releases/latest
+    about: Check that you are on the newest release before reporting a problem.
+  - name: Read the Nexium documentation
+    url: https://github.com/GregoryAM-SP/Nexium#readme
+    about: Installation, requirements and feature overview.
