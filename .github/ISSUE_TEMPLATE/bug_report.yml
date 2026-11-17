@@ -52,11 +52,11 @@ body:
     attributes:
       label: How did you install Nexium?
       options:
-        - Windows installer (.exe / .msi)
+        - Windows installer (.exe)
+        - Windows installer (.msi)
         - AppImage
-        - .deb package
-        - Built from source
-        - Other
+        - RPM package (.rpm)
+        - DEB package (.deb)
     validations:
       required: true
 
