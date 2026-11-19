@@ -2,13 +2,14 @@
 // Keeps the "Nexium version" dropdown in the bug report form in sync with the
 // published releases, so the template never has to be edited by hand when a new
 // version ships. GitHub issue forms cannot fetch data at render time, so the
-// workflow rewrites the options between the markers in bug_report.yml.
+// workflow rewrites the options between the markers in bug_report.yml. Only the
+// newest release is listed: older versions are reported through the "Not listed"
+// option and the free-text field, so the dropdown never grows.
 import { execFileSync } from "node:child_process";
 import { readFileSync, writeFileSync } from "node:fs";
 
 const START = "# <nexium-versions:start>";
 const END = "# <nexium-versions:end>";
-const MAX_OPTIONS = 20;
 
 const templatePath =
   process.argv[2] ?? ".github/ISSUE_TEMPLATE/bug_report.yml";
@@ -47,7 +48,7 @@ function compareDesc(a, b) {
   return a.localeCompare(b);
 }
 
-function collectVersions() {
+function latestVersion() {
   if (!repo && !process.env.NEXIUM_VERSIONS_JSON) {
     throw new Error("GITHUB_REPOSITORY is not set.");
   }
@@ -82,12 +83,12 @@ function collectVersions() {
     }
   }
 
-  return versions.sort(compareDesc).slice(0, MAX_OPTIONS);
+  return versions.sort(compareDesc)[0] ?? null;
 }
 
 function main() {
-  const versions = collectVersions();
-  if (versions.length === 0) {
+  const latest = latestVersion();
+  if (!latest) {
     console.log("No releases or tags found; leaving the template untouched.");
     return;
   }
@@ -107,7 +108,7 @@ function main() {
     throw new Error(`Version markers are malformed in ${templatePath}.`);
   }
 
-  const block = versions.map((version) => `        - ${version}`).join("\n");
+  const block = `        - ${latest}`;
   const updated =
     source.slice(0, startLineEnd + 1) +
     `${block}\n` +
@@ -118,7 +119,7 @@ function main() {
     return;
   }
   writeFileSync(templatePath, updated);
-  console.log(`Updated ${versions.length} version options in ${templatePath}.`);
+  console.log(`Updated the version option to ${latest} in ${templatePath}.`);
 }
 
 main();
