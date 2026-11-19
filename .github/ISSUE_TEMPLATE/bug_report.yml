@@ -16,18 +16,14 @@ body:
       options:
         # <nexium-versions:start>
         - v1.0.11
-        - v1.0.10
-        - v1.0.9
-        - v1.0.8
         # <nexium-versions:end>
-        - Not listed — I wrote the exact version below
     validations:
       required: true
 
   - type: input
     id: version-other
     attributes:
-      label: Exact version (only if not listed above)
+      label: Exact version (if different from the version above)
       placeholder: e.g. 1.0.3 (build 2026-11-16)
     validations:
       required: false

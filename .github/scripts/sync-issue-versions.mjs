@@ -2,9 +2,9 @@
 // Keeps the "Nexium version" dropdown in the bug report form in sync with the
 // published releases, so the template never has to be edited by hand when a new
 // version ships. GitHub issue forms cannot fetch data at render time, so the
-// workflow rewrites the options between the markers in bug_report.yml. Only the
-// newest release is listed: older versions are reported through the "Not listed"
-// option and the free-text field, so the dropdown never grows.
+// workflow rewrites the options between the markers in bug_report.yml. The
+// newest release is the only option, so the dropdown never grows and never
+// shows an older version.
 import { execFileSync } from "node:child_process";
 import { readFileSync, writeFileSync } from "node:fs";
 
