@@ -15,7 +15,7 @@ body:
       description: Shown in the title bar menu (Help → About) or in the installer file name.
       options:
         # <nexium-versions:start>
-        - v1.0.12
+        - v1.0.13
         # <nexium-versions:end>
     validations:
       required: true
